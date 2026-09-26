@@ -1,0 +1,406 @@
+/**
+ * Estilo do Showcase Inspirado no Cash App: A Casa & Ambientes
+ * Em vez de um celular, o ponto focal é uma Residência de Design Arquitetônico.
+ * Transição 3D, camadas flutuantes em perspectiva e alternância de cômodos.
+ */
+
+.house-showcase-section {
+  position: relative;
+  padding: 7rem 0 8rem 0;
+  background-color: var(--color-primary-dark);
+  color: var(--color-cream-bg);
+  overflow: hidden;
+}
+
+/* Background Gradients & Luz Ambiente */
+.house-showcase-section::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(196, 159, 117, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(80px);
+}
+
+.house-showcase-section .section-header h2 {
+  color: #FFFFFF;
+}
+
+.house-showcase-section .section-header p {
+  color: var(--color-stone-light);
+}
+
+/* Seletor de Cômodos em Pílulas (Estilo Cash App Mode Switcher) */
+.room-tabs-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.room-tabs {
+  display: inline-flex;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.4rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(196, 159, 117, 0.25);
+  backdrop-filter: blur(16px);
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.room-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.room-tab-btn {
+  padding: 0.75rem 1.6rem;
+  border-radius: var(--radius-full);
+  color: var(--color-stone-light);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.room-tab-btn .tab-icon {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.room-tab-btn:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.room-tab-btn.active {
+  background: var(--color-accent-gold);
+  color: var(--color-primary-dark);
+  box-shadow: 0 4px 20px rgba(196, 159, 117, 0.4);
+}
+
+.room-tab-btn.active .tab-icon {
+  opacity: 1;
+}
+
+/* Palco Central 3D (The House Stage) */
+.house-stage-container {
+  position: relative;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  perspective: 1400px;
+  transform-style: preserve-3d;
+}
+
+.house-stage {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-xl);
+  background: var(--color-dark-surface);
+  border: 1px solid rgba(196, 159, 117, 0.3);
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.6), 0 0 40px rgba(196, 159, 117, 0.15);
+  overflow: hidden;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.6), 0 0 40px rgba(196, 159, 117, 0.15);
+  transform-style: preserve-3d;
+  will-change: transform;
+  backface-visibility: hidden;
+  touch-action: pan-y;
+}
+
+/* Moldura Superior da Casa (Estilo Viewport Arquitetônica) */
+.house-frame-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.75rem;
+  background: rgba(30, 25, 20, 0.95);
+  border-bottom: 1px solid rgba(196, 159, 117, 0.2);
+  z-index: 5;
+  position: relative;
+}
+
+.frame-indicators {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.frame-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(196, 159, 117, 0.4);
+}
+
+.frame-dot.active {
+  background: var(--color-accent-gold);
+  box-shadow: 0 0 8px var(--color-accent-gold);
+}
+
+.frame-room-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  color: var(--color-accent-gold);
+  text-transform: uppercase;
+}
+
+.frame-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--color-stone-light);
+  letter-spacing: 0.06em;
+}
+
+.frame-live-badge::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-accent-gold);
+  animation: pulseWhatsApp 2s infinite;
+}
+
+/* Janela Visual do Ambiente */
+.house-viewport {
+  position: relative;
+  aspect-ratio: 16/9;
+  min-height: 480px;
+  max-height: 640px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.house-ambient-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: roomFadeZoom 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform;
+  backface-visibility: hidden;
+  pointer-events: none;
+}
+
+/* Vinheta de Iluminação Arquitetônica */
+.house-ambient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(30, 25, 20, 0.85) 0%, rgba(30, 25, 20, 0.1) 40%, rgba(30, 25, 20, 0.4) 100%);
+  pointer-events: none;
+}
+
+/* Hotspots Interativos no Ambiente */
+.ambient-hotspot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+  cursor: pointer;
+}
+
+.hotspot-pin {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(38, 33, 27, 0.85);
+  border: 2px solid var(--color-accent-gold);
+  color: var(--color-accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  box-shadow: 0 0 20px rgba(196, 159, 117, 0.6);
+  transition: all var(--transition-bounce);
+  animation: pulseGlow 2.5s infinite;
+}
+
+.ambient-hotspot:hover .hotspot-pin {
+  transform: scale(1.25);
+  background: var(--color-accent-gold);
+  color: var(--color-primary-dark);
+}
+
+.hotspot-tooltip {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: rgba(30, 25, 20, 0.95);
+  border: 1px solid rgba(196, 159, 117, 0.4);
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  font-size: 0.8125rem;
+  color: #FFFFFF;
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-lg);
+}
+
+.ambient-hotspot:hover .hotspot-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Camadas Flutuantes (Floating Cards do Cash App) Orbitando a Casa */
+.floating-pieces-rack {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 1.25rem;
+  z-index: 20;
+  overflow-x: auto;
+  padding: 0.5rem 0.25rem;
+  scrollbar-width: none;
+  pointer-events: none;
+}
+
+.floating-pieces-rack::-webkit-scrollbar {
+  display: none;
+}
+
+.floating-piece-item {
+  flex: 0 0 270px;
+  background: rgba(30, 25, 20, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(196, 159, 117, 0.35);
+  border-radius: var(--radius-md);
+  padding: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: all var(--transition-smooth);
+  animation: pieceCardFlyIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.floating-piece-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(38, 33, 27, 0.95);
+  border-color: var(--color-accent-gold);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(196, 159, 117, 0.35);
+}
+
+.floating-piece-thumb {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  border: 1px solid rgba(196, 159, 117, 0.3);
+  flex-shrink: 0;
+}
+
+.floating-piece-info {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.floating-piece-badge {
+  font-size: 0.6875rem;
+  color: var(--color-accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.floating-piece-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.25;
+}
+
+.floating-piece-action {
+  font-size: 0.75rem;
+  color: var(--color-stone-light);
+  margin-top: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.floating-piece-action svg {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.floating-piece-item:hover .floating-piece-action {
+  color: var(--color-accent-gold);
+}
+
+/* Painel de Detalhes Inferior do Ambiente */
+.ambient-details-bar {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.75rem 2.25rem;
+  background: rgba(24, 20, 16, 0.98);
+  border-top: 1px solid rgba(196, 159, 117, 0.2);
+}
+
+.ambient-text h3 {
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  margin-bottom: 0.35rem;
+}
+
+.ambient-text p {
+  color: var(--color-stone-light);
+  font-size: 0.925rem;
+  line-height: 1.6;
+}
+
+.ambient-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+@media (max-width: 991px) {
+  .house-viewport {
+    aspect-ratio: 4/3;
+    min-height: 420px;
+  }
+  .floating-pieces-rack {
+    position: static;
+    background: rgba(30, 25, 20, 0.95);
+    padding: 1rem 1.5rem;
+    border-top: 1px solid rgba(196, 159, 117, 0.2);
+  }
+  .ambient-details-bar {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .ambient-actions {
+    justify-content: flex-start;
+  }
+}

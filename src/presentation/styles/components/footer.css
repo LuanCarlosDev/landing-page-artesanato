@@ -1,0 +1,123 @@
+/**
+ * Estilo do Rodapé e do Botão Flutuante de WhatsApp
+ */
+
+/* Rodapé Oficial */
+.footer {
+  background-color: #17130F;
+  color: var(--color-stone-light);
+  padding: 5rem 0 2.5rem 0;
+  border-top: 1px solid rgba(196, 159, 117, 0.15);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3.5rem;
+  margin-bottom: 4rem;
+}
+
+.footer-brand .brand-logo-img {
+  height: 54px;
+  width: auto;
+  margin-bottom: 1.25rem;
+  filter: brightness(1.2);
+}
+
+.footer-brand p {
+  font-size: 0.925rem;
+  line-height: 1.7;
+  max-width: 360px;
+}
+
+.footer-col h4 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.03em;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links a {
+  font-size: 0.9rem;
+  color: var(--color-stone-light);
+  transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--color-accent-gold);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.8125rem;
+}
+
+.footer-bottom a {
+  color: var(--color-accent-gold);
+}
+
+/* Botão Flutuante do WhatsApp */
+.floating-whatsapp-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 990;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--color-primary-dark);
+  color: var(--color-cream-bg);
+  border: 1.5px solid var(--color-accent-gold);
+  padding: 0.85rem 1.4rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 10px 30px rgba(38, 33, 27, 0.25), 0 0 20px rgba(196, 159, 117, 0.4);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+  text-decoration: none;
+}
+
+.floating-whatsapp-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 14px 40px rgba(38, 33, 27, 0.4), 0 0 30px rgba(196, 159, 117, 0.6);
+  background-color: var(--color-accent-gold);
+  color: var(--color-primary-dark);
+}
+
+.floating-whatsapp-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .floating-whatsapp-btn span {
+    display: none;
+  }
+  .floating-whatsapp-btn {
+    padding: 1rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}

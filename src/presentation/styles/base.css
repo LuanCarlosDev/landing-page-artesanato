@@ -1,0 +1,230 @@
+/**
+ * Estilos Base & Reset Moderno
+ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--color-cream-bg);
+  color: var(--color-primary-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  background-color: var(--color-cream-bg);
+  color: var(--color-primary-dark);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Scrollbar personalizada sofisticada */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent-gold);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-cream-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}
+
+/* Imagens responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Links & Botões */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  transition: var(--transition-fast);
+}
+
+/* Tipografia de Cabeçalhos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--color-primary-dark);
+  letter-spacing: -0.01em;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 4vw, 3rem);
+  padding-right: clamp(1.25rem, 4vw, 3rem);
+}
+
+/* Tag / Badge Padrão */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(196, 159, 117, 0.15);
+  border: 1px solid rgba(196, 159, 117, 0.35);
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary-dark);
+  backdrop-filter: blur(8px);
+}
+
+.badge-pill.dark {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(196, 159, 117, 0.3);
+  color: var(--color-cream-bg);
+}
+
+.badge-pill::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent-gold);
+}
+
+/* Botões Primários e Secundários */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: var(--color-primary-dark);
+  color: var(--color-cream-bg);
+  padding: 0.95rem 1.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(196, 159, 117, 0.25) 0%, rgba(38, 33, 27, 0) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  z-index: -1;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl), 0 0 25px rgba(196, 159, 117, 0.3);
+  background-color: #17130F;
+}
+
+.btn-primary:hover::after {
+  opacity: 1;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background-color: transparent;
+  color: var(--color-primary-dark);
+  padding: 0.85rem 1.65rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-accent-gold);
+  font-size: 0.925rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-accent-gold);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background-color: var(--color-primary-dark);
+  color: var(--color-cream-bg);
+  padding: 0.9rem 1.75rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-accent-gold);
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 24px rgba(38, 33, 27, 0.15);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--color-accent-gold);
+  color: var(--color-primary-dark);
+  border-color: var(--color-accent-gold);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Section Header Helper */
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.section-header .section-eyebrow {
+  margin-bottom: 0.85rem;
+}
+
+.section-header h2 {
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  margin-bottom: 1.1rem;
+}
+
+.section-header p {
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  color: var(--color-stone);
+  line-height: 1.7;
+}

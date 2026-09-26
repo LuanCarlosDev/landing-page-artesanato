@@ -1,0 +1,17 @@
+/**
+ * Master Stylesheet - Lílian Costa Landing Page
+ * Arquitetura Limpa: Agrupamento Modular de Estilos
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@import './tokens.css';
+@import './base.css';
+@import './animations.css';
+@import './components/navbar.css';
+@import './components/hero.css';
+@import './components/house-showcase.css';
+@import './components/gallery.css';
+@import './components/modal.css';
+@import './components/story.css';
+@import './components/footer.css';

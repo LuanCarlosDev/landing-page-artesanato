@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lílian Costa | Artesã de Peças Únicas & Design Afetivo</title>
+  <meta name="description" content="Landing page oficial de Lílian Costa. Conheça minhas peças artesanais únicas em macramê, madeira nobre, fibras naturais e arte afetiva para o seu lar. Atendimento pessoal no WhatsApp.">
+  <meta name="keywords" content="artesanato de luxo, peças únicas, macramê, decoração artesanal, Lílian Costa, Aracaju, design afetivo, mesa posta, madeira maciça">
+  <meta name="author" content="Lílian Costa">
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lílian Costa | Artesã de Peças Únicas">
+  <meta property="og:description" content="Onde o meu afeto molda a matéria e a sua casa ganha alma singular. Peças exclusivas feitas à mão por Lílian Costa.">
+  <meta property="og:image" content="./src/assets/ambients/casa-fachada.webp">
+
+  <!-- Favicon com o símbolo autoral LC -->
+  <link rel="icon" type="image/png" href="./src/assets/brand/logo-novo-icon.png">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Folha de Estilos Mestra (Clean Architecture) -->
+  <link rel="stylesheet" href="./src/presentation/styles/main.css">
+</head>
+<body>
+
+  <!-- ==============================================
+       BARRA DE NAVEGAÇÃO (NAVBAR)
+  ============================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="#inicio" class="navbar-brand" aria-label="Lílian Costa Página Inicial">
+        <img src="./src/assets/brand/logo-novo-dark.png" alt="Lílian Costa - Artesã de Peças Únicas" class="brand-logo-img">
+      </a>
+
+      <nav aria-label="Navegação Principal">
+        <ul class="navbar-nav">
+          <li><a href="#inicio" class="nav-link">Início</a></li>
+          <li><a href="#casa-showcase" class="nav-link">Ambientes Planejados</a></li>
+          <li><a href="#galeria" class="nav-link">Minhas Peças</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre Mim</a></li>
+          <li><a href="#filosofia" class="nav-link">Filosofia</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-whatsapp nav-btn-whatsapp" data-whatsapp="general">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+          <span>Falar Comigo no WhatsApp</span>
+        </a>
+
+        <button class="mobile-toggle" aria-label="Abrir menu de navegação" id="mobile-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Gaveta Mobile -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Menu Mobile">
+    <div class="mobile-drawer-header">
+      <img src="./src/assets/brand/logo-novo-dark.png" alt="Lílian Costa" style="height: 42px; width: auto;">
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#inicio" class="mobile-nav-link">Início</a></li>
+      <li><a href="#casa-showcase" class="mobile-nav-link">Ambientes Planejados</a></li>
+      <li><a href="#galeria" class="mobile-nav-link">Minhas Peças</a></li>
+      <li><a href="#sobre" class="mobile-nav-link">Sobre Mim</a></li>
+      <li><a href="#filosofia" class="mobile-nav-link">Filosofia</a></li>
+      <li><a href="#contato" class="mobile-nav-link">Contato</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="width: 100%; justify-content: center;" data-whatsapp="general">
+        <span>Conversar Comigo no WhatsApp</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==============================================
+       SEÇÃO HERO (BOAS-VINDAS & POSICIONAMENTO)
+  ============================================== -->
+  <section class="hero-section" id="inicio">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Onde o meu afeto molda a matéria e a sua casa ganha <span class="highlight">alma singular.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Seja muito bem-vindo ao meu atelier. Sou <strong>Lílian Costa</strong> e crio obras artesanais exclusivas e atemporais, tecidas e esculpidas à mão. Cada criação minha é absolutamente única, concebida para habitar os seus espaços com história, aconchego e elegância orgânica.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#casa-showcase" class="btn-primary">
+              <span>Explorar Ambientes Planejados</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <a href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary" data-whatsapp="general">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+              <span>Falar Diretamente Comigo</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Feito por Mim</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">16+</span>
+              <span class="stat-label">Criações Autorais</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">Zero</span>
+              <span class="stat-label">Peças Repetidas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Palco Visual Hero com Efeito Cash App -->
+        <div class="hero-visual-stage">
+          <div class="hero-composition">
+            <div class="hero-main-card">
+              <img src="./src/assets/pieces/mesa-lateral-organica-madeira.webp" alt="Mesa Lateral Orgânica em Madeira Maciça criada por Lílian Costa">
+              <div class="hero-main-overlay">
+                <h3>Mobiliário & Fibras Nobres</h3>
+                <p>Curvas orgânicas esculpidas à mão por mim</p>
+              </div>
+            </div>
+
+            <!-- Satélites Flutuantes do Hero (Estilo Cash App) -->
+            <div class="hero-floating-badge animate-float">
+              <div class="badge-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <div class="badge-text">
+                <strong>Design Singular</strong>
+                <span>Fibras & Madeira Nobre</span>
+              </div>
+            </div>
+
+            <div class="hero-floating-piece-card animate-float-delay">
+              <img src="./src/assets/pieces/kit-mesa-posta-coracao-rubi.webp" alt="Kit Mesa Posta Macramê Rubi">
+              <div class="floating-info">
+                <span class="floating-title">Conjunto Rubi</span>
+                <span class="floating-tag">Macramê Artesanal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       SHOWCASE CASH APP: AMBIENTES PLANEJADOS
+       (Visualização Pura da Imagem com Cards Flutuantes)
+  ============================================== -->
+  <section class="house-showcase-section" id="casa-showcase">
+    <div class="container">
+      <div class="section-header">
+        <h2>Ambientes Planejados</h2>
+        <p>
+          Inspire-se em como o trabalho artesanal transforma salas, mesas e quartos em composições harmônicas, elegantes e cheias de vida.
+        </p>
+      </div>
+
+      <!-- Seletor de Cômodos (Pills Mode Switcher) -->
+      <div class="room-tabs-wrapper" id="room-tabs-container">
+        <!-- Renderizado dinamicamente pelo HouseShowcaseController -->
+      </div>
+
+      <!-- Palco Central Arquitetônico 3D -->
+      <div class="house-stage-container perspective-stage" id="house-stage-container">
+        <div class="house-stage" id="house-stage">
+
+          <!-- Viewport do Ambiente: Somente a Imagem Pura com Cards Flutuantes -->
+          <div class="house-viewport" id="house-viewport">
+            <img 
+              id="house-ambient-img" 
+              class="house-ambient-image" 
+              src="./src/assets/ambients/casa-sala-estar.webp" 
+              alt="Ambiente Planejado por Lílian Costa"
+            >
+            <div class="house-ambient-overlay"></div>
+
+            <!-- Camadas Flutuantes (Floating Cards do Cash App) -->
+            <div class="floating-pieces-rack" id="floating-pieces-rack">
+              <!-- Cards das peças do cômodo inseridos dinamicamente -->
+            </div>
+          </div>
+
+          <!-- Barra Inferior com Nome do Cômodo e Ação WhatsApp -->
+          <div class="ambient-details-bar">
+            <div class="ambient-text" id="ambient-details-text">
+              <h3>Sala de Estar & Nichos</h3>
+              <p>O diálogo entre o mineral, a madeira e as minhas fibras acolhe o olhar com serenidade.</p>
+            </div>
+            <div class="ambient-actions">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" id="ambient-whatsapp-btn">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+                <span>Conversar Comigo Sobre Este Ambiente</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       GALERIA COMPLETA DE PEÇAS ÚNICAS
+       (Sem Preços • Apenas Valor, Arte e WhatsApp)
+  ============================================== -->
+  <section class="gallery-section" id="galeria">
+    <div class="container">
+      <div class="section-header">
+        <h2>As Minhas Peças Únicas</h2>
+        <p>
+          Por serem criações 100% autorais e sem repetição, cada obra minha nasce do cuidado manual e não possui preço tabelado na página. Escolha a sua peça favorita e venha conversar diretamente comigo no WhatsApp para combinarmos os detalhes para o seu lar.
+        </p>
+      </div>
+
+      <!-- Controles: Busca e Categorias -->
+      <div class="gallery-controls">
+        <div class="gallery-search-bar">
+          <div class="search-icon-wrapper">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+          <input 
+            type="text" 
+            id="gallery-search-input" 
+            class="gallery-search-input" 
+            placeholder="Pesquisar por nome, macramê, madeira, terracota..." 
+            aria-label="Pesquisar peças artesanais"
+          >
+        </div>
+
+        <div class="gallery-categories" id="gallery-categories">
+          <!-- Categorias renderizadas dinamicamente pelo GalleryController -->
+        </div>
+      </div>
+
+      <!-- Grid com todas as 16 peças autorais -->
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Injetado dinamicamente -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       SOBRE A ARTESÃ: LÍLIAN COSTA (NARRATIVA EM 1ª PESSOA)
+  ============================================== -->
+  <section class="artisan-section" id="sobre">
+    <div class="container">
+      <div class="artisan-grid">
+        <div class="artisan-portrait-wrapper">
+          <div class="artisan-portrait-card">
+            <img src="./src/assets/brand/lilian-costa-artesa.webp" alt="Lílian Costa, artesã de peças únicas">
+          </div>
+          <div class="artisan-stamp-card">
+            <p>Feito à mão, com tempo, alma e verdade.</p>
+            <span>Aracaju • Sergipe</span>
+          </div>
+        </div>
+
+        <div class="artisan-content">
+          <h2>Muito prazer, sou Lílian Costa</h2>
+          <p class="lead-text">
+            "Não produzo em série. Cada fibra que entrelaço com as minhas mãos e cada madeira que lixo com carinho carrega a minha intenção de transformar a sua casa em um refúgio de paz."
+          </p>
+          <p>
+            Aqui em Aracaju, no meu atelier, dedico meus dias a pesquisar matérias-primas puras e nobres: cordões de algodão cru que tinjo manualmente, sisal brasileiro, bambus selecionados e madeiras nobres com veios que contam histórias. O meu processo criativo respeita o tempo da arte: cada nó de macramê é dado ponto a ponto, sem pressa.
+          </p>
+          <p>
+            Acredito que o verdadeiro luxo contemporâneo está na exclusividade e no afeto. Quando você escolhe uma criação minha, não leva apenas um objeto decorativo, mas uma história autoral irrepetível. Terei imensa alegria em conversar pessoalmente com você e apresentar cada detalhe.
+          </p>
+
+          <div class="artisan-signature-row">
+            <span class="artisan-signature-name">Lílian Costa</span>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" data-whatsapp="general">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+              <span>Falar Diretamente Comigo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       PILARES DE VALOR (FILOSOFIA DO FEITO À MÃO)
+  ============================================== -->
+  <section class="values-section" id="filosofia">
+    <div class="container">
+      <div class="section-header">
+        <h2>Os Meus Princípios de Criação</h2>
+        <p>Os valores que guiam cada detalhe que crio para o seu lar.</p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <h3>100% Peças Únicas por Mim Criadas</h3>
+          <p>Não trabalho com moldes nem produção industrial. Cada nó, veio de madeira ou laço é irrepetível, garantindo que o seu espaço receba uma obra autêntica e sem cópias.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+            </svg>
+          </div>
+          <h3>Matérias-Primas Puras & Sustentáveis</h3>
+          <p>Seleciono pessoalmente algodão puro regenerado, madeiras nobres de poda ou demolição, sisal orgânico e sementes que conectam os seus sentidos à terra.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <h3>Design Afetivo & Harmonia</h3>
+          <p>Crio pensando na harmonia do seu lar: peças pensadas para promover bem-estar, aconchego tátil e serenidade visual em cada cantinho da sua casa.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+          </div>
+          <h3>Conversa Direta no WhatsApp</h3>
+          <p>Sem intermediários ou mensagens automáticas frias. Você conversa diretamente comigo, de pessoa para pessoa, para tirar dúvidas e escolher a sua obra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       BANNER DE CONTATO & ENCOMENDAS EXCLUSIVAS
+  ============================================== -->
+  <section class="contact-banner-section" id="contato">
+    <div class="container">
+      <div class="contact-banner-card">
+        <h2>Deseja que eu crie uma peça sob medida para o seu lar?</h2>
+        <p>
+          Conte-me sobre o seu ambiente, suas cores preferidas e as texturas que você deseja ver no seu espaço. Eu mesma atenderei você no WhatsApp para darmos vida à sua ideia.
+        </p>
+
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="font-size: 1.05rem; padding: 1.1rem 2.2rem;" data-whatsapp="custom">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+          <span>Iniciar Conversa Comigo no WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       RODAPÉ OFICIAL (FOOTER)
+  ============================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="./src/assets/brand/logo-novo-light.png" alt="Lílian Costa" class="brand-logo-img">
+          <p>
+            Meu atelier autoral de peças exclusivas em macramê, madeira maciça e design afetivo. Criando lares mais acolhedores em todo o Brasil.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#casa-showcase">Ambientes Planejados</a></li>
+            <li><a href="#galeria">Catálogo de Peças</a></li>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#filosofia">Filosofia</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atelier & Contato</h4>
+          <ul class="footer-links">
+            <li style="display:flex; align-items:center; gap:0.6rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Aracaju, Sergipe • Brasil</span>
+            </li>
+            <li style="display:flex; align-items:center; gap:0.6rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Segunda a Sexta, das 08h às 18h</span>
+            </li>
+            <li style="display:flex; align-items:center; gap:0.6rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+              <a href="#" target="_blank" rel="noopener noreferrer" data-whatsapp="general">WhatsApp: (79) 98132-1565</a>
+            </li>
+            <li style="display:flex; align-items:center; gap:0.6rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              <a href="https://instagram.com/lilian_costa77" target="_blank" rel="noopener noreferrer">Instagram: @lilian_costa77</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lílian Costa • Todos os direitos reservados. Peças autorais únicas.</p>
+        <p>Design & Arquitetura Limpa • <a href="#inicio">Voltar ao topo ↑</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================================
+       MODAL DE INSPEÇÃO DA PEÇA ÚNICA
+  ============================================== -->
+  <div class="piece-modal-backdrop" id="piece-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="piece-modal-container" id="piece-modal-container">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Fechar janela de detalhes">&times;</button>
+      
+      <div class="piece-modal-grid">
+        <div class="modal-media-col">
+          <img id="modal-img" class="modal-main-img" src="" alt="Peça Única">
+        </div>
+
+        <div class="modal-content-col">
+          <div class="modal-eyebrow-row">
+            <span id="modal-category" style="font-size: 0.8rem; font-weight: 700; color: var(--color-accent-gold); text-transform: uppercase;">Categoria</span>
+          </div>
+
+          <h2 class="modal-title" id="modal-title">Título da Peça</h2>
+          <p class="modal-subtitle" id="modal-subtitle">Subtítulo poético da peça</p>
+
+          <p class="modal-description" id="modal-description">Descrição completa dos detalhes manuais e materiais da obra.</p>
+
+          <div class="modal-concept-quote" id="modal-concept">
+            "Conceito artístico da peça."
+          </div>
+
+          <div class="modal-spec-grid">
+            <div class="spec-item">
+              <span class="spec-label">Dimensões</span>
+              <span class="spec-value" id="modal-dimensions">Dimensões da peça</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Materiais</span>
+              <span class="spec-value" id="modal-materials">Materiais</span>
+            </div>
+            <div class="spec-item" style="grid-column: 1 / -1;">
+              <span class="spec-label">Técnicas Manuais</span>
+              <span class="spec-value" id="modal-techniques">Técnicas</span>
+            </div>
+          </div>
+
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn-whatsapp modal-whatsapp-cta" id="modal-whatsapp-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <span>Conversar Diretamente Comigo Sobre Esta Peça</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================================
+       BOTÃO FLUTUANTE DO WHATSAPP (CORES DA PALETA)
+  ============================================== -->
+  <a href="#" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn animate-whatsapp" id="floating-whatsapp-btn" data-whatsapp="general" aria-label="Conversar no WhatsApp com Lílian Costa">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+    </svg>
+    <span>Falar com Lílian</span>
+  </a>
+
+  <!-- ==============================================
+       SCRIPT MODULAR (CLEAN ARCHITECTURE ENTRYPOINT)
+  ============================================== -->
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
