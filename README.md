@@ -1,4 +1,4 @@
-# 🌿 Lílian Costa — Artesã de Peças Únicas & Design Afetivo
+#  Lílian Costa — Artesã de Peças Únicas & Design Afetivo
 
 <p align="center">
   <img src="src/assets/brand/logo-novo-dark.png" alt="Lílian Costa Logo" width="280">
@@ -19,7 +19,7 @@
 
 ---
 
-## 📖 Sobre o Projeto
+##  Sobre o Projeto
 
 Landing page institucional e catálogo interativo desenvolvido para a artesã **Lílian Costa**. O projeto foi concebido para transmitir a elegância, o carinho e a sofisticação do artesanato afetivo de alto padrão — unindo macramê, fibras naturais, madeira nobre e arranjos florais à decoração de interiores.
 
@@ -27,23 +27,23 @@ A aplicação conta com uma experiência rica e imersiva para o visitante, apres
 
 ---
 
-## ✨ Principais Funcionalidades
+##  Principais Funcionalidades
 
-- **🏡 Showcase de Ambientes (House Tour Interativo):**
+- ** Showcase de Ambientes (House Tour Interativo):**
   - Navegação visual por cômodos da casa, mostrando como cada peça artesanal compõe os ambientes reais.
-- **🖼️ Galeria Dinâmica de Peças & Coleções:**
+- ** Galeria Dinâmica de Peças & Coleções:**
   - Filtros por categoria (Macramê, Mesa Posta, Madeira & Fibras, etc.).
   - Modal imersivo com detalhes da peça, materiais utilizados, dimensões e história de criação.
-- **💬 Gerador Dinâmico de Pedidos via WhatsApp:**
+- ** Gerador Dinâmico de Pedidos via WhatsApp:**
   - Ao clicar em "Encomendar" em qualquer peça ou ambiente, um link direto para o WhatsApp é criado com uma mensagem contextualizada automática já preenchida.
-- **📱 Design 100% Responsivo & Mobile First:**
+- ** Design 100% Responsivo & Mobile First:**
   - Layout otimizado para celulares, tablets e desktops com drawer menu suave.
-- **🎨 Identidade Visual Premium:**
+- ** Identidade Visual Premium:**
   - Tipografia refinada (*Cormorant Garamond* e *Plus Jakarta Sans*), micro-interações, paleta orgânica (terracota, linho, verde sábia) e animações fluidas.
 
 ---
 
-## 🛠️ Arquitetura e Tecnologias
+##  Arquitetura e Tecnologias
 
 O projeto foi construído seguindo princípios de **Clean Architecture** e boas práticas de engenharia de software moderno, utilizando tecnologias nativas para garantir máxima performance, leveza e ausência de dependências pesadas:
 
@@ -57,7 +57,7 @@ O projeto foi construído seguindo princípios de **Clean Architecture** e boas 
 
 ---
 
-## 📁 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```text
 ├── imagens/                     # Banco de fotos originais de produção
@@ -82,7 +82,7 @@ O projeto foi construído seguindo princípios de **Clean Architecture** e boas 
 
 ---
 
-## 🚀 Como Executar Localmente
+##  Como Executar Localmente
 
 Como o projeto é estático e utiliza JavaScript ES Modules nativo, basta executá-lo através de qualquer servidor local simples:
 
@@ -102,7 +102,7 @@ Basta clicar com o botão direito no arquivo `index.html` e selecionar **"Open w
 
 ---
 
-## 🌐 Publicação (Deploy)
+##  Publicação (Deploy)
 
 Para publicar o projeto online gratuitamente utilizando o **GitHub Pages**:
 1. No repositório no GitHub, acesse **Settings** > **Pages**.
@@ -112,6 +112,6 @@ Para publicar o projeto online gratuitamente utilizando o **GitHub Pages**:
 
 ---
 
-## 👤 Autor
+##  Autor
 
 Desenvolvido com carinho por **[Luan Carlos](https://github.com/LuanCarlosDev)**.
