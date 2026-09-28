@@ -13,3 +13,8 @@ desktop.ini
 # IDE & Editor files
 .vscode/
 .idea/
+
+# Environment and sensitive files
+.env
+.env.*
+!.env.example
